@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+
+  },
+  "include": [
+    "typing/*.d.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
