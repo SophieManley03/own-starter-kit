@@ -4,6 +4,6 @@ import * as React from 'react'
 
 
 export const Hello = () => {
-  console.log('eeee')
+  console.log('eeee dddd')
   return <div className={ styles.hello }>Hello you!</div>
 }

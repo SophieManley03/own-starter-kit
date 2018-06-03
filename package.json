@@ -29,7 +29,9 @@
   "dependencies": {
     "@types/react": "^16.3.16",
     "@types/react-dom": "^16.0.5",
+    "local-web-server": "^2.5.2",
     "react": "^16.3.16",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^16.0.5",
     "ts-loader": "^2.3.3",
     "tslint": "^5.10.0",
