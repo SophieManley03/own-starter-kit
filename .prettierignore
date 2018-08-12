@@ -1,0 +1,9 @@
+README.md
+/package-lock.json
+/package.json
+*.json
+*.log
+*.css
+*.js
+*.md
+*.less

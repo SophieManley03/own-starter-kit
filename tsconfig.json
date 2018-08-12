@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "strict": true,
     "module": "commonjs",
     "target": "es6",
     "jsx": "react",
-
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": [ "./src/*" ]
+    },
   },
   "include": [
-    "typing/*.d.ts",
+    "typings/*.d.ts",
     "src/**/*"
   ],
   "exclude": [
     "node_modules"
   ]
-}
+} 
