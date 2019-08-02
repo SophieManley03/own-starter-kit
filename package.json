@@ -1,5 +1,5 @@
 {
-  "name": "life",
+  "name": "starter",
   "version": "0.0.1",
   "description": "Starter kit",
   "main": "index.js",
@@ -47,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "csx": "^9.1.0",
     "eslint": "6.1.0",
     "eslint-plugin-react": "^7.14.3",
     "express": "^4.17.1",
