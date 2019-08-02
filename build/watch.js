@@ -2,9 +2,9 @@ const path = require('path')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 const tsconfig = path.resolve(__dirname, '../tsconfig.json')
-const tslintConfig = path.resolve(__dirname, '../tslint.json')
+const tslintConfig = path.resolve(__dirname, '../.eslintrc.js')
 
-const tsLinter    = { test: /\.tsx?$/, enforce: 'pre', loader: 'tslint-loader', options: { configFile: tslintConfig } }
+const esLinter    = { test: /\.tsx?$/, enforce: 'pre', loader: 'eslint-loader', options: { configFile: tslintConfig } }
 const tsLoader    = { test: /\.tsx?$/, loader: 'ts-loader', options: { configFile: tsconfig } }
 
 
@@ -39,7 +39,7 @@ module.exports = {
     ],
     module: {
       rules: [
-        tsLinter,
+        esLinter,
         tsLoader,
       ]
     },
