@@ -12,7 +12,6 @@ The project should open itself on your browser (`localhost:3000`)
 * Prettier
 * React
 * Typescript
-* redux
 * typestyle
 
 ### What is missing?

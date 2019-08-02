@@ -1,5 +1,10 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import style from './style'
+// import * as React from 'react'
+// import * as ReactDOM from 'react-dom'
+// import AppRouter from './Route'
 
-ReactDOM.render(<div className={style.hello}> Hello </div>, document.getElementById('index'))
+// ReactDOM.hydrate(<AppRouter />, document.getElementById('index'))
+
+import * as React from 'react'
+import { hydrate } from 'react-dom'
+import App from './Route'
+hydrate(<App />, document.getElementById('reactele'))

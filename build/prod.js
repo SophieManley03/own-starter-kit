@@ -1,17 +1,12 @@
 const path = require('path')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-
 const tsconfig = path.resolve(__dirname, '../tsconfig.json')
 const tslintConfig = path.resolve(__dirname, '../.eslintrc.js')
-
 const esLinter    = { test: /\.tsx?$/, enforce: 'pre', loader: 'eslint-loader', options: { configFile: tslintConfig } }
 const tsLoader    = { test: /\.tsx?$/, loader: 'ts-loader', options: { configFile: tsconfig } }
-
 const output = {
   path: path.resolve(__dirname, '../public'),
-  filename: 'app.js'
+  filename: '[name].js'
 }
-
 const resolve = {
   extensions: ['.webpack.js', '.ts', '.tsx', '.js', '.less'],
   alias: {
@@ -23,25 +18,25 @@ const resolve = {
   ]
 }
 
+const env = process.env.NODE_ENV
+
 module.exports = {
+  mode: env || 'development',
   context: path.resolve(__dirname, '..'),
   entry: ['./src/index.tsx'],
   output,
   resolve,
-  plugins: [
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      //server: { baseDir: ['./'] },
-      proxy: 'localhost:3030'
-    })
-  ],
   module: {
     rules: [
       esLinter,
-      tsLoader
+      tsLoader,
     ]
   },
-    
+  devServer: {
+    contentBase: path.join(__dirname, '..'),
+    compress: true,
+    port: 9000
+  },
+
   devtool: 'source-map'
 };
